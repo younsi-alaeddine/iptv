@@ -208,7 +208,7 @@ export function SharingApollo() {
           <div className="space-y-2">
             <div className="text-accent text-3xl font-bold">€</div>
             <div className="font-semibold">Économies garanties</div>
-            <div className="text-sm text-gray-600">Jusqu&apos;à 70% d&apos;économies par rapport aux prix officiels</div>
+            <div className="text-sm text-gray-600">Jusqu'à 70% d'économies par rapport aux prix officiels</div>
           </div>
           <div className="space-y-2">
             <div className="text-accent text-3xl font-bold">🛡️</div>

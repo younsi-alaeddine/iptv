@@ -1,5 +1,4 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -80,7 +79,7 @@ export default function SharingApolloPage() {
                       </li>
                     ))}
                   </ul>
-                  <Button className="w-full">S&apos;abonner</Button>
+                  <Button className="w-full">S'abonner</Button>
                 </CardContent>
               </Card>
             ))}
@@ -105,7 +104,7 @@ export default function SharingApolloPage() {
                       </li>
                     ))}
                   </ul>
-                  <Button className="w-full">S&apos;abonner</Button>
+                  <Button className="w-full">S'abonner</Button>
                 </CardContent>
               </Card>
             ))}

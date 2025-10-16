@@ -50,7 +50,7 @@ const useFormField = () => {
   const fieldState = getFieldState(fieldContext.name, formState)
 
   if (!fieldContext) {
-    throw new Error("useFormField should be used within <FormField>&quot;)
+    throw new Error("useFormField should be used within <FormField>")
   }
 
   const { id } = itemContext
@@ -155,13 +155,13 @@ function FormMessage({ className, ...props }: React.ComponentProps<"p">) {
   )
 }
 
-export {
+export {          
   useFormField,
   Form,
-  FormItem,
-  FormLabel,
   FormControl,
   FormDescription,
-  FormMessage,
   FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
 }

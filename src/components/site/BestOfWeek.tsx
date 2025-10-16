@@ -3,11 +3,20 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { featuredProducts } from "@/lib/data";
+import { useCart } from "@/contexts/CartContext";
+import { ShoppingCart } from "lucide-react";
 
 function ProductCard({ product, index }: { product: any; index: number }) {
+  const { dispatch } = useCart();
+
+  const addToCart = () => {
+    dispatch({ type: "ADD_ITEM", payload: product });
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -65,18 +74,27 @@ function ProductCard({ product, index }: { product: any; index: number }) {
             )}
           </div>
           
-          <div className="flex flex-wrap gap-1">
-            {product.features.slice(0, 2).map((feature: string, i: number) => (
-              <Badge key={i} variant="secondary" className="text-xs">
-                {feature}
-              </Badge>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
-    </motion.div>
-  );
-}
+                 <div className="flex flex-wrap gap-1">
+                   {product.features.slice(0, 2).map((feature: string, i: number) => (
+                     <Badge key={i} variant="secondary" className="text-xs">
+                       {feature}
+                     </Badge>
+                   ))}
+                 </div>
+
+                 <Button
+                   onClick={addToCart}
+                   size="sm"
+                   className="w-full bg-primary hover:bg-primary/90 text-white font-semibold"
+                 >
+                   <ShoppingCart className="w-4 h-4 mr-2" />
+                   Ajouter au panier
+                 </Button>
+               </CardContent>
+             </Card>
+           </motion.div>
+         );
+       }
 
 export function BestOfWeek() {
   const iptvProducts = featuredProducts.filter(p => p.category === "IPTV");

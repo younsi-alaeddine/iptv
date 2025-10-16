@@ -1,0 +1,62 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Electro Satellite Tunisie",
+  "description": "Leader en Tunisie pour les abonnements IPTV premium, Sharing & Apollo, Box Android 4K, BeIN Sports, Netflix officiel et accessoires streaming.",
+  "url": "https://electro-satellite.tn",
+  "logo": "https://electro-satellite.tn/logo.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+216-25-288-323",
+    "contactType": "customer service",
+    "areaServed": "TN",
+    "availableLanguage": ["French", "Arabic"]
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "TN",
+    "addressLocality": "Tunis"
+  },
+  "sameAs": [
+    "https://www.facebook.com/electro.satellite.tn",
+    "https://www.instagram.com/electro_satellite_tn",
+    "https://twitter.com/electro_satellite_tn"
+  ],
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "TND",
+    "lowPrice": "15",
+    "highPrice": "300",
+    "offerCount": "50+"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services IPTV et Streaming",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Abonnements IPTV",
+          "description": "Accès à plus de 10,000 chaînes HD/4K"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Sharing & Apollo",
+          "description": "Comptes partagés Netflix, Shahid, Disney+"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Box Android",
+          "description": "Box Android 4K haute performance"
+        }
+      }
+    ]
+  }
+}

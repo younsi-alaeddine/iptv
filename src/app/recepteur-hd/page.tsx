@@ -122,7 +122,7 @@ export default function RecepteurHDPage() {
           <div className="text-center">
             <div className="text-4xl mb-2">📡</div>
             <h3 className="font-semibold mb-2">Installation Antenne</h3>
-            <p className="text-sm text-muted-foreground">Installation complète de l&apos;antenne satellite</p>
+            <p className="text-sm text-muted-foreground">Installation complète de l'antenne satellite</p>
           </div>
           <div className="text-center">
             <div className="text-4xl mb-2">⚙️</div>
@@ -132,7 +132,7 @@ export default function RecepteurHDPage() {
           <div className="text-center">
             <div className="text-4xl mb-2">📺</div>
             <h3 className="font-semibold mb-2">Test Final</h3>
-            <p className="text-sm text-muted-foreground">Test de réception et qualité d&apos;image</p>
+            <p className="text-sm text-muted-foreground">Test de réception et qualité d'image</p>
           </div>
           <div className="text-center">
             <div className="text-4xl mb-2">🛠️</div>

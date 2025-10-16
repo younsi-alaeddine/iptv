@@ -2,7 +2,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import Image from "next/image";
 
 const netflixPlans = [
   {
@@ -139,7 +138,7 @@ export default function NetflixPage() {
           <div className="text-center">
             <div className="text-4xl mb-2">👥</div>
             <h3 className="font-semibold mb-2">Profils</h3>
-            <p className="text-sm text-muted-foreground">Jusqu&apos;à 5 profils personnalisés</p>
+            <p className="text-sm text-muted-foreground">Jusqu'à 5 profils personnalisés</p>
           </div>
           <div className="text-center">
             <div className="text-4xl mb-2">🚫</div>

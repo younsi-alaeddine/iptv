@@ -119,13 +119,13 @@ export function Hero() {
 
       {/* Effet de particules flottantes */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(6)].map((_, i) => (
+        {[0, 1, 2, 3, 4, 5].map((i) => (
           <motion.div
             key={i}
             className="absolute w-2 h-2 bg-accent/30 rounded-full"
             initial={{ 
-              x: Math.random() * window.innerWidth, 
-              y: Math.random() * window.innerHeight,
+              x: (i * 200) % 1200, 
+              y: (i * 150) % 800,
               opacity: 0 
             }}
             animate={{ 
@@ -133,9 +133,9 @@ export function Hero() {
               opacity: [0, 1, 0]
             }}
             transition={{ 
-              duration: 3 + Math.random() * 2,
+              duration: 3 + (i * 0.5),
               repeat: Infinity,
-              delay: Math.random() * 2
+              delay: i * 0.5
             }}
           />
         ))}

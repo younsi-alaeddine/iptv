@@ -1,0 +1,470 @@
+// ===== ARCHITECTURE RÉVOLUTIONNAIRE - ELECTRO SATELLITE TUNISIE =====
+// Système Multi-Tenant Ultra-Puissant pour Produits Digitaux et Physiques
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// ===== TENANT SYSTEM =====
+model Tenant {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  slug        String   @unique
+  type        TenantType
+  settings    Json     @default("{}")
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // Relations
+  users       User[]
+  products   Product[]
+  orders      Order[]
+  analytics   Analytics[]
+  commissions Commission[]
+  categories  Category[]
+  
+  @@index([type, isActive])
+}
+
+// ===== USER SYSTEM =====
+model User {
+  id          String   @id @default(cuid())
+  tenantId    String
+  email       String
+  name        String?
+  phone       String?
+  role        UserRole
+  tier        UserTier
+  permissions Json     @default("{}")
+  metadata    Json     @default("{}")
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // Relations
+  tenant      Tenant   @relation(fields: [tenantId], references: [id])
+  orders      Order[]
+  commissions Commission[]
+  addresses   Address[]
+  paymentMethods PaymentMethod[]
+  cartItems   CartItem[]
+  reviews     Review[]
+  
+  @@unique([tenantId, email])
+  @@index([role, tier])
+}
+
+// ===== CATEGORY SYSTEM =====
+model Category {
+  id          String   @id @default(cuid())
+  tenantId    String
+  name        String
+  slug        String
+  description String?
+  parentId    String?
+  isActive    Boolean  @default(true)
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  tenant      Tenant   @relation(fields: [tenantId], references: [id])
+  parent      Category? @relation("CategoryHierarchy", fields: [parentId], references: [id])
+  children    Category[] @relation("CategoryHierarchy")
+  products    Product[]
+  
+  @@unique([tenantId, slug])
+  @@index([parentId, sortOrder])
+}
+
+// ===== PRODUCT SYSTEM =====
+model Product {
+  id          String   @id @default(cuid())
+  tenantId    String
+  categoryId  String
+  sku         String
+  name        String
+  description String?
+  type        ProductType
+  categoryName String
+  subcategory String?
+  
+  // Prix et stock
+  price       Decimal
+  originalPrice Decimal?
+  cost        Decimal?
+  margin      Decimal?
+  
+  // Stock (physique)
+  stock       Int      @default(0)
+  minStock    Int      @default(0)
+  maxStock    Int?
+  
+  // Digital
+  digitalContent DigitalContent?
+  
+  // Physique
+  physicalSpecs PhysicalSpecs?
+  
+  // Images et médias
+  images      ProductImage[]
+  videos      ProductVideo[]
+  
+  // SEO et marketing
+  seoTitle    String?
+  seoDescription String?
+  tags        String
+  isFeatured  Boolean  @default(false)
+  isPopular   Boolean  @default(false)
+  isNew       Boolean  @default(false)
+  
+  // Statut
+  status      ProductStatus @default(ACTIVE)
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  tenant      Tenant   @relation(fields: [tenantId], references: [id])
+  category    Category @relation(fields: [categoryId], references: [id])
+  orderItems  OrderItem[]
+  cartItems   CartItem[]
+  reviews     Review[]
+  
+  @@unique([tenantId, sku])
+  @@index([type, categoryId])
+  @@index([status, isActive])
+}
+
+// ===== DIGITAL CONTENT =====
+model DigitalContent {
+  id          String   @id @default(cuid())
+  productId   String   @unique
+  type        DigitalType
+  content     String   // URL ou contenu
+  accessKey   String?  // Clé d'accès
+  expiryDate  DateTime?
+  downloadLimit Int?
+  downloadCount Int    @default(0)
+  isEncrypted Boolean @default(false)
+  encryptionKey String?
+  
+  product     Product  @relation(fields: [productId], references: [id])
+  
+  @@index([type])
+}
+
+// ===== PHYSICAL SPECS =====
+model PhysicalSpecs {
+  id          String   @id @default(cuid())
+  productId   String   @unique
+  weight      Decimal?
+  dimensions  String? // JSON string: {length, width, height}
+  material    String?
+  color       String?
+  size        String?
+  brand       String?
+  model       String?
+  warranty    String?
+  
+  product     Product  @relation(fields: [productId], references: [id])
+}
+
+// ===== PRODUCT MEDIA =====
+model ProductImage {
+  id          String   @id @default(cuid())
+  productId   String
+  url         String
+  alt         String?
+  isPrimary   Boolean  @default(false)
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+  
+  product     Product  @relation(fields: [productId], references: [id])
+  
+  @@index([productId, isPrimary])
+}
+
+model ProductVideo {
+  id          String   @id @default(cuid())
+  productId   String
+  url         String
+  title       String?
+  description String?
+  duration    Int?     // en secondes
+  isPrimary   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  
+  product     Product  @relation(fields: [productId], references: [id])
+  
+  @@index([productId, isPrimary])
+}
+
+// ===== ORDER SYSTEM =====
+model Order {
+  id          String   @id @default(cuid())
+  tenantId    String
+  userId      String
+  orderNumber String   @unique
+  status      OrderStatus
+  type        OrderType
+  
+  // Totaux
+  subtotal    Decimal
+  tax         Decimal
+  shipping    Decimal
+  discount    Decimal
+  total       Decimal
+  
+  // Adresses
+  billingAddress  String // JSON string
+  shippingAddress String? // JSON string
+  
+  // Paiement
+  paymentMethod   String?
+  paymentStatus   PaymentStatus
+  paymentId       String?
+  
+  // Livraison
+  shippingMethod  String?
+  trackingNumber  String?
+  estimatedDelivery DateTime?
+  deliveredAt     DateTime?
+  
+  // Métadonnées
+  notes       String?
+  metadata    String? // JSON string
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  tenant      Tenant   @relation(fields: [tenantId], references: [id])
+  user        User     @relation(fields: [userId], references: [id])
+  items       OrderItem[]
+  commissions Commission[]
+  
+  @@index([tenantId, status])
+  @@index([userId, createdAt])
+}
+
+// ===== ORDER ITEMS =====
+model OrderItem {
+  id        String  @id @default(cuid())
+  orderId   String
+  productId String
+  quantity  Int     @default(1)
+  price     Decimal
+  total     Decimal
+  
+  order   Order   @relation(fields: [orderId], references: [id])
+  product Product @relation(fields: [productId], references: [id])
+  
+  @@index([orderId])
+}
+
+// ===== CART SYSTEM =====
+model CartItem {
+  id        String  @id @default(cuid())
+  userId    String
+  productId String
+  quantity  Int     @default(1)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  user    User    @relation(fields: [userId], references: [id])
+  product Product @relation(fields: [productId], references: [id])
+  
+  @@unique([userId, productId])
+}
+
+// ===== ADDRESS SYSTEM =====
+model Address {
+  id          String   @id @default(cuid())
+  userId      String
+  type        AddressType
+  firstName   String
+  lastName    String
+  company     String?
+  address1    String
+  address2    String?
+  city        String
+  state       String?
+  postalCode  String?
+  country     String
+  phone       String?
+  isDefault   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  user        User     @relation(fields: [userId], references: [id])
+  
+  @@index([userId, type])
+}
+
+// ===== PAYMENT METHODS =====
+model PaymentMethod {
+  id          String   @id @default(cuid())
+  userId      String
+  type        PaymentMethodType
+  provider    String
+  token       String
+  isDefault   Boolean  @default(false)
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  user        User     @relation(fields: [userId], references: [id])
+  
+  @@index([userId, type])
+}
+
+// ===== COMMISSION SYSTEM =====
+model Commission {
+  id          String   @id @default(cuid())
+  tenantId    String
+  orderId     String
+  userId      String
+  level       Int
+  percentage  Decimal
+  amount      Decimal
+  status      CommissionStatus
+  paidAt      DateTime?
+  createdAt   DateTime @default(now())
+  
+  tenant      Tenant   @relation(fields: [tenantId], references: [id])
+  order       Order    @relation(fields: [orderId], references: [id])
+  user        User     @relation(fields: [userId], references: [id])
+  
+  @@index([userId, status])
+  @@index([tenantId, createdAt])
+}
+
+// ===== REVIEW SYSTEM =====
+model Review {
+  id          String   @id @default(cuid())
+  productId   String
+  userId      String
+  rating      Int      // 1-5
+  title       String?
+  comment     String?
+  isVerified  Boolean  @default(false)
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  product     Product  @relation(fields: [productId], references: [id])
+  user        User     @relation(fields: [userId], references: [id])
+  
+  @@index([productId, rating])
+  @@index([userId, createdAt])
+}
+
+// ===== ANALYTICS SYSTEM =====
+model Analytics {
+  id          String   @id @default(cuid())
+  tenantId    String
+  event       String
+  data        String   // JSON string
+  userId      String?
+  sessionId   String?
+  createdAt   DateTime @default(now())
+  
+  tenant      Tenant   @relation(fields: [tenantId], references: [id])
+  
+  @@index([tenantId, event, createdAt])
+}
+
+// ===== ENUMS =====
+enum TenantType {
+  CUSTOMER
+  RESELLER
+  ADMIN
+  SUPER_ADMIN
+}
+
+enum UserRole {
+  SUPER_ADMIN
+  ADMIN
+  RESELLER
+  CUSTOMER
+  GUEST
+}
+
+enum UserTier {
+  BRONZE
+  SILVER
+  GOLD
+  PLATINUM
+  DIAMOND
+}
+
+enum ProductType {
+  DIGITAL
+  PHYSICAL
+  MIXED
+  SERVICE
+}
+
+enum DigitalType {
+  IPTV_SUBSCRIPTION
+  STREAMING_ACCOUNT
+  SOFTWARE_LICENSE
+  EBOOK
+  COURSE
+  MEMBERSHIP
+  API_ACCESS
+}
+
+enum ProductStatus {
+  ACTIVE
+  INACTIVE
+  DRAFT
+  ARCHIVED
+}
+
+enum OrderStatus {
+  PENDING
+  CONFIRMED
+  PROCESSING
+  SHIPPED
+  DELIVERED
+  CANCELLED
+  REFUNDED
+}
+
+enum OrderType {
+  DIGITAL_ONLY
+  PHYSICAL_ONLY
+  MIXED
+}
+
+enum PaymentStatus {
+  PENDING
+  PAID
+  FAILED
+  REFUNDED
+  PARTIALLY_REFUNDED
+}
+
+enum PaymentMethodType {
+  CREDIT_CARD
+  DEBIT_CARD
+  BANK_TRANSFER
+  MOBILE_PAYMENT
+  CRYPTOCURRENCY
+}
+
+enum AddressType {
+  BILLING
+  SHIPPING
+}
+
+enum CommissionStatus {
+  PENDING
+  APPROVED
+  PAID
+  CANCELLED
+}
