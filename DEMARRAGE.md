@@ -1,46 +1,46 @@
 # 🚀 DÉMARRAGE RAPIDE - ELECTRO SATELLITE TUNISIE
 
-## ✅ **SERVEUR ACTIF** - http://localhost:3000
+## ✅ **SERVEUR ACTIF** - https://iptv-ten-mu.vercel.app/
 
 ### 🎯 **LIENS DIRECTS PRINCIPAUX**
 
 #### 🏠 **PAGE D'ACCUEIL**
 ```
-http://localhost:3000/
+https://iptv-ten-mu.vercel.app/
 ```
 **✨ Page d'accueil avec hero animé, produits vedettes, et navigation complète**
 
 #### 🎛️ **DASHBOARDS RÉVOLUTIONNAIRES**
 ```
-Super Admin Dashboard: http://localhost:3000/super-admin/dashboard
-Dashboard Revendeur:   http://localhost:3000/revendeur/dashboard
+Super Admin Dashboard: https://iptv-ten-mu.vercel.app/super-admin/dashboard
+Dashboard Revendeur:   https://iptv-ten-mu.vercel.app/revendeur/dashboard
 ```
 **🎯 Dashboards ultra-avancés avec analytics en temps réel**
 
 #### 🔐 **AUTHENTIFICATION**
 ```
-Connexion:  http://localhost:3000/auth/signin
-Inscription: http://localhost:3000/auth/signup
+Connexion:  https://iptv-ten-mu.vercel.app/auth/signin
+Inscription: https://iptv-ten-mu.vercel.app/auth/signup
 ```
 **🔑 Système d'authentification multi-tenant révolutionnaire**
 
 #### 📱 **CATÉGORIES PRODUITS**
 ```
-Abonnement TV:    http://localhost:3000/ipTV
-Sharing & Apollo: http://localhost:3000/sharing-apollo
-Box Android:      http://localhost:3000/box-android
-Récepteur HD:     http://localhost:3000/recepteur-hd
-BeIN Sports:      http://localhost:3000/bein-sports
-Netflix:          http://localhost:3000/netflix
-Accessoires:      http://localhost:3000/accessoires
+Abonnement TV:    https://iptv-ten-mu.vercel.app/ipTV
+Sharing & Apollo: https://iptv-ten-mu.vercel.app/sharing-apollo
+Box Android:      https://iptv-ten-mu.vercel.app/box-android
+Récepteur HD:     https://iptv-ten-mu.vercel.app/recepteur-hd
+BeIN Sports:      https://iptv-ten-mu.vercel.app/bein-sports
+Netflix:          https://iptv-ten-mu.vercel.app/netflix
+Accessoires:      https://iptv-ten-mu.vercel.app/accessoires
 ```
 **📦 Gestion intelligente des produits digitaux et physiques**
 
 #### 🛒 **FONCTIONNALITÉS E-COMMERCE**
 ```
-Panier:      http://localhost:3000/cart
-Profil:      http://localhost:3000/profile
-Contact:     http://localhost:3000/contact
+Panier:      https://iptv-ten-mu.vercel.app/cart
+Profil:      https://iptv-ten-mu.vercel.app/profile
+Contact:     https://iptv-ten-mu.vercel.app/contact
 ```
 **🛍️ Panier intelligent avec gestion des commandes**
 
@@ -51,7 +51,7 @@ Contact:     http://localhost:3000/contact
 ### 🔐 **AUTHENTIFICATION**
 ```bash
 # Connexion
-POST http://localhost:3000/api/auth/revolutionary
+POST https://iptv-ten-mu.vercel.app/api/auth/revolutionary
 {
   "action": "login",
   "email": "user@example.com",
@@ -60,7 +60,7 @@ POST http://localhost:3000/api/auth/revolutionary
 }
 
 # Inscription
-POST http://localhost:3000/api/auth/revolutionary
+POST https://iptv-ten-mu.vercel.app/api/auth/revolutionary
 {
   "action": "register",
   "email": "user@example.com",
@@ -73,13 +73,13 @@ POST http://localhost:3000/api/auth/revolutionary
 ### 📦 **PRODUITS**
 ```bash
 # Tous les produits
-GET http://localhost:3000/api/products/revolutionary?tenantId=tenant-id
+GET https://iptv-ten-mu.vercel.app/api/products/revolutionary?tenantId=tenant-id
 
 # Recherche intelligente
-GET http://localhost:3000/api/products/revolutionary?tenantId=tenant-id&search=iptv&type=DIGITAL
+GET https://iptv-ten-mu.vercel.app/api/products/revolutionary?tenantId=tenant-id&search=iptv&type=DIGITAL
 
 # Création de produit
-POST http://localhost:3000/api/products/revolutionary
+POST https://iptv-ten-mu.vercel.app/api/products/revolutionary
 {
   "tenantId": "tenant-id",
   "categoryId": "category-id",
@@ -96,7 +96,7 @@ POST http://localhost:3000/api/products/revolutionary
 ### 💰 **COMMISSIONS**
 ```bash
 # Calcul automatique
-POST http://localhost:3000/api/commissions/revolutionary
+POST https://iptv-ten-mu.vercel.app/api/commissions/revolutionary
 {
   "action": "calculate",
   "orderId": "order-id",
@@ -107,7 +107,7 @@ POST http://localhost:3000/api/commissions/revolutionary
 }
 
 # Rapport détaillé
-GET http://localhost:3000/api/commissions/revolutionary?action=report&tenantId=tenant-id&userId=user-id&startDate=2024-01-01&endDate=2024-12-31
+GET https://iptv-ten-mu.vercel.app/api/commissions/revolutionary?action=report&tenantId=tenant-id&userId=user-id&startDate=2024-01-01&endDate=2024-12-31
 ```
 
 ---

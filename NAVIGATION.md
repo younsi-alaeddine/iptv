@@ -1,44 +1,44 @@
 # 🚀 NAVIGATION RAPIDE - ELECTRO SATELLITE TUNISIE
 
-## 🎯 **LIENS PRINCIPAUX** (http://localhost:3000)
+## 🎯 **LIENS PRINCIPAUX** (https://iptv-ten-mu.vercel.app/)
 
 ### 🏠 **PAGES PUBLIQUES**
 | Page | Lien | Description |
 |------|------|-------------|
-| **Accueil** | `/` | Page d'accueil avec hero et produits |
-| **Panier** | `/cart` | Panier d'achat avec gestion des items |
-| **Contact** | `/contact` | Informations de contact et support |
+| **Accueil** | https://iptv-ten-mu.vercel.app/ | Page d'accueil avec hero et produits |
+| **Panier** | https://iptv-ten-mu.vercel.app/cart | Panier d'achat avec gestion des items |
+| **Contact** | https://iptv-ten-mu.vercel.app/contact | Informations de contact et support |
 
 ### 🔐 **AUTHENTIFICATION**
 | Page | Lien | Description |
 |------|------|-------------|
-| **Connexion** | `/auth/signin` | Page de connexion utilisateur |
-| **Inscription** | `/auth/signup` | Page d'inscription nouveau compte |
+| **Connexion** | https://iptv-ten-mu.vercel.app/auth/signin | Page de connexion utilisateur |
+| **Inscription** | https://iptv-ten-mu.vercel.app/auth/signup | Page d'inscription nouveau compte |
 
 ### 📱 **CATÉGORIES PRODUITS**
 | Page | Lien | Description |
 |------|------|-------------|
-| **Abonnement TV** | `/ipTV` | Abonnements IPTV et streaming |
-| **Sharing & Apollo** | `/sharing-apollo` | Services de partage et Apollo |
-| **Box Android** | `/box-android` | Box Android et matériel |
-| **Récepteur HD** | `/recepteur-hd` | Récepteurs HD et accessoires |
-| **BeIN Sports** | `/bein-sports` | Abonnements sportifs |
-| **Netflix Official** | `/netflix` | Abonnements Netflix officiels |
-| **Accessoires** | `/accessoires` | Accessoires et périphériques |
+| **Abonnement TV** | https://iptv-ten-mu.vercel.app/ipTV | Abonnements IPTV et streaming |
+| **Sharing & Apollo** | https://iptv-ten-mu.vercel.app/sharing-apollo | Services de partage et Apollo |
+| **Box Android** | https://iptv-ten-mu.vercel.app/box-android | Box Android et matériel |
+| **Récepteur HD** | https://iptv-ten-mu.vercel.app/recepteur-hd | Récepteurs HD et accessoires |
+| **BeIN Sports** | https://iptv-ten-mu.vercel.app/bein-sports | Abonnements sportifs |
+| **Netflix Official** | https://iptv-ten-mu.vercel.app/netflix | Abonnements Netflix officiels |
+| **Accessoires** | https://iptv-ten-mu.vercel.app/accessoires | Accessoires et périphériques |
 
 ### 🎛️ **DASHBOARDS**
 | Page | Lien | Description |
 |------|------|-------------|
-| **Super Admin** | `/super-admin/dashboard` | Contrôle total du système |
-| **Revendeur** | `/revendeur/dashboard` | Gestion des ventes et commissions |
+| **Super Admin** | https://iptv-ten-mu.vercel.app/super-admin/dashboard | Contrôle total du système |
+| **Revendeur** | https://iptv-ten-mu.vercel.app/revendeur/dashboard | Gestion des ventes et commissions |
 
 ### 📄 **PAGES LÉGALES**
 | Page | Lien | Description |
 |------|------|-------------|
-| **Mentions Légales** | `/mentions-legales` | Mentions légales du site |
-| **Confidentialité** | `/politique-confidentialite` | Politique de confidentialité |
-| **CGV** | `/cgv` | Conditions générales de vente |
-| **Livraison** | `/livraison` | Informations de livraison |
+| **Mentions Légales** | https://iptv-ten-mu.vercel.app/mentions-legales | Mentions légales du site |
+| **Confidentialité** | https://iptv-ten-mu.vercel.app/politique-confidentialite | Politique de confidentialité |
+| **CGV** | https://iptv-ten-mu.vercel.app/cgv | Conditions générales de vente |
+| **Livraison** | https://iptv-ten-mu.vercel.app/livraison | Informations de livraison |
 
 ---
 
@@ -47,7 +47,7 @@
 ### 🔐 **AUTHENTIFICATION**
 ```bash
 # Connexion
-POST /api/auth/revolutionary
+POST https://iptv-ten-mu.vercel.app/api/auth/revolutionary
 {
   "action": "login",
   "email": "user@example.com",
@@ -56,7 +56,7 @@ POST /api/auth/revolutionary
 }
 
 # Inscription
-POST /api/auth/revolutionary
+POST https://iptv-ten-mu.vercel.app/api/auth/revolutionary
 {
   "action": "register",
   "email": "user@example.com",
@@ -66,23 +66,23 @@ POST /api/auth/revolutionary
 }
 
 # Vérification token
-GET /api/auth/revolutionary
+GET https://iptv-ten-mu.vercel.app/api/auth/revolutionary
 Authorization: Bearer <token>
 ```
 
 ### 📦 **PRODUITS**
 ```bash
 # Récupérer tous les produits
-GET /api/products/revolutionary?tenantId=tenant-id
+GET https://iptv-ten-mu.vercel.app/api/products/revolutionary?tenantId=tenant-id
 
 # Rechercher des produits
-GET /api/products/revolutionary?tenantId=tenant-id&search=iptv&type=DIGITAL
+GET https://iptv-ten-mu.vercel.app/api/products/revolutionary?tenantId=tenant-id&search=iptv&type=DIGITAL
 
 # Produit par ID
 GET /api/products/revolutionary?productId=product-id&tenantId=tenant-id
 
 # Créer un produit
-POST /api/products/revolutionary
+POST https://iptv-ten-mu.vercel.app/api/products/revolutionary
 {
   "tenantId": "tenant-id",
   "categoryId": "category-id",
@@ -96,7 +96,7 @@ POST /api/products/revolutionary
 }
 
 # Mettre à jour un produit
-PUT /api/products/revolutionary
+PUT https://iptv-ten-mu.vercel.app/api/products/revolutionary
 {
   "productId": "product-id",
   "updateData": {
@@ -106,13 +106,13 @@ PUT /api/products/revolutionary
 }
 
 # Supprimer un produit
-DELETE /api/products/revolutionary?productId=product-id&softDelete=true
+DELETE https://iptv-ten-mu.vercel.app/api/products/revolutionary?productId=product-id&softDelete=true
 ```
 
 ### 💰 **COMMISSIONS**
 ```bash
 # Calculer les commissions
-POST /api/commissions/revolutionary
+POST https://iptv-ten-mu.vercel.app/api/commissions/revolutionary
 {
   "action": "calculate",
   "orderId": "order-id",
@@ -123,7 +123,7 @@ POST /api/commissions/revolutionary
 }
 
 # Créer les commissions
-POST /api/commissions/revolutionary
+POST https://iptv-ten-mu.vercel.app/api/commissions/revolutionary
 {
   "action": "create",
   "tenantId": "tenant-id",
@@ -132,23 +132,23 @@ POST /api/commissions/revolutionary
 }
 
 # Rapport de commissions
-GET /api/commissions/revolutionary?action=report&tenantId=tenant-id&userId=user-id&startDate=2024-01-01&endDate=2024-12-31
+GET https://iptv-ten-mu.vercel.app/api/commissions/revolutionary?action=report&tenantId=tenant-id&userId=user-id&startDate=2024-01-01&endDate=2024-12-31
 
 # Analytics des commissions
-GET /api/commissions/revolutionary?action=analytics&tenantId=tenant-id&startDate=2024-01-01&endDate=2024-12-31
+GET https://iptv-ten-mu.vercel.app/api/commissions/revolutionary?action=analytics&tenantId=tenant-id&startDate=2024-01-01&endDate=2024-12-31
 
 # Hiérarchie des revendeurs
-GET /api/commissions/revolutionary?action=hierarchy&tenantId=tenant-id&userId=user-id&level=3
+GET https://iptv-ten-mu.vercel.app/api/commissions/revolutionary?action=hierarchy&tenantId=tenant-id&userId=user-id&level=3
 
 # Approuver les commissions
-PUT /api/commissions/revolutionary
+PUT https://iptv-ten-mu.vercel.app/api/commissions/revolutionary
 {
   "action": "approve",
   "commissionIds": ["id1", "id2"]
 }
 
 # Payer les commissions
-PUT /api/commissions/revolutionary
+PUT https://iptv-ten-mu.vercel.app/api/commissions/revolutionary
 {
   "action": "pay",
   "commissionIds": ["id1", "id2"]

@@ -66,9 +66,9 @@ npm run dev
 ```
 
 ### 🌐 Accès
-- **Application** : http://localhost:3000
-- **Documentation** : http://localhost:3000/README.md
-- **Liens rapides** : http://localhost:3000/liens-rapides.html
+- **Application** : https://iptv-ten-mu.vercel.app/
+- **Documentation** : https://iptv-ten-mu.vercel.app/README.md
+- **Liens rapides** : https://iptv-ten-mu.vercel.app/liens-rapides.html
 
 ## 🎯 Architecture Technique
 
@@ -118,34 +118,34 @@ const commission = CommissionCalculator.calculateCommission(
 
 | Page | URL | Description |
 |------|-----|-------------|
-| 🏠 **Accueil** | `/` | Page d'accueil avec hero animé |
-| 🎛️ **Super Admin** | `/super-admin/dashboard` | Contrôle total du système |
-| 💼 **Revendeur** | `/revendeur/dashboard` | Gestion des ventes |
-| 🔐 **Connexion** | `/auth/signin` | Authentification |
-| 📦 **Produits** | `/ipTV`, `/netflix`, etc. | Catégories de produits |
-| 🛒 **Panier** | `/cart` | Panier d'achat intelligent |
+| 🏠 **Accueil** | https://iptv-ten-mu.vercel.app/ | Page d'accueil avec hero animé |
+| 🎛️ **Super Admin** | https://iptv-ten-mu.vercel.app/super-admin/dashboard | Contrôle total du système |
+| 💼 **Revendeur** | https://iptv-ten-mu.vercel.app/revendeur/dashboard | Gestion des ventes |
+| 🔐 **Connexion** | https://iptv-ten-mu.vercel.app/auth/signin | Authentification |
+| 📦 **Produits** | https://iptv-ten-mu.vercel.app/ipTV, https://iptv-ten-mu.vercel.app/netflix, etc. | Catégories de produits |
+| 🛒 **Panier** | https://iptv-ten-mu.vercel.app/cart | Panier d'achat intelligent |
 
 ## 🚀 API Routes
 
 ### 🔐 Authentification
 ```bash
-POST /api/auth/revolutionary
-GET  /api/auth/revolutionary
+POST https://iptv-ten-mu.vercel.app/api/auth/revolutionary
+GET  https://iptv-ten-mu.vercel.app/api/auth/revolutionary
 ```
 
 ### 📦 Produits
 ```bash
-GET    /api/products/revolutionary
-POST   /api/products/revolutionary
-PUT    /api/products/revolutionary
-DELETE /api/products/revolutionary
+GET    https://iptv-ten-mu.vercel.app/api/products/revolutionary
+POST   https://iptv-ten-mu.vercel.app/api/products/revolutionary
+PUT    https://iptv-ten-mu.vercel.app/api/products/revolutionary
+DELETE https://iptv-ten-mu.vercel.app/api/products/revolutionary
 ```
 
 ### 💰 Commissions
 ```bash
-POST /api/commissions/revolutionary
-GET  /api/commissions/revolutionary
-PUT  /api/commissions/revolutionary
+POST https://iptv-ten-mu.vercel.app/api/commissions/revolutionary
+GET  https://iptv-ten-mu.vercel.app/api/commissions/revolutionary
+PUT  https://iptv-ten-mu.vercel.app/api/commissions/revolutionary
 ```
 
 ## 🏆 Système de Commissions

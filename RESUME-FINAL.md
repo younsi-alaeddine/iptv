@@ -4,7 +4,7 @@
 
 ### 🚀 **SERVEUR ACTIF**
 ```
-URL: http://localhost:3000
+URL: https://iptv-ten-mu.vercel.app
 Status: ✅ EN LIGNE
 Build: ✅ RÉUSSI
 Tests: ✅ PASSÉS
@@ -15,33 +15,33 @@ Tests: ✅ PASSÉS
 ## 🎯 **TOUS LES LIENS DISPONIBLES**
 
 ### 🏠 **PAGES PRINCIPALES**
-- **Accueil** : http://localhost:3000/
-- **Panier** : http://localhost:3000/cart
-- **Profil** : http://localhost:3000/profile
-- **Contact** : http://localhost:3000/contact
+- **Accueil** : https://iptv-ten-mu.vercel.app/
+- **Panier** : https://iptv-ten-mu.vercel.app/cart
+- **Profil** : https://iptv-ten-mu.vercel.app/profile
+- **Contact** : https://iptv-ten-mu.vercel.app/contact
 
 ### 🎛️ **DASHBOARDS RÉVOLUTIONNAIRES**
-- **Super Admin** : http://localhost:3000/super-admin/dashboard
-- **Revendeur** : http://localhost:3000/revendeur/dashboard
+- **Super Admin** : https://iptv-ten-mu.vercel.app/super-admin/dashboard
+- **Revendeur** : https://iptv-ten-mu.vercel.app/revendeur/dashboard
 
 ### 🔐 **AUTHENTIFICATION**
-- **Connexion** : http://localhost:3000/auth/signin
-- **Inscription** : http://localhost:3000/auth/signup
+- **Connexion** : https://iptv-ten-mu.vercel.app/auth/signin
+- **Inscription** : https://iptv-ten-mu.vercel.app/auth/signup
 
 ### 📱 **CATÉGORIES PRODUITS**
-- **Abonnement TV** : http://localhost:3000/ipTV
-- **Sharing & Apollo** : http://localhost:3000/sharing-apollo
-- **Box Android** : http://localhost:3000/box-android
-- **Récepteur HD** : http://localhost:3000/recepteur-hd
-- **BeIN Sports** : http://localhost:3000/bein-sports
-- **Netflix** : http://localhost:3000/netflix
-- **Accessoires** : http://localhost:3000/accessoires
+- **Abonnement TV** : https://iptv-ten-mu.vercel.app/ipTV
+- **Sharing & Apollo** : https://iptv-ten-mu.vercel.app/sharing-apollo
+- **Box Android** : https://iptv-ten-mu.vercel.app/box-android
+- **Récepteur HD** : https://iptv-ten-mu.vercel.app/recepteur-hd
+- **BeIN Sports** : https://iptv-ten-mu.vercel.app/bein-sports
+- **Netflix** : https://iptv-ten-mu.vercel.app/netflix
+- **Accessoires** : https://iptv-ten-mu.vercel.app/accessoires
 
 ### 📄 **PAGES LÉGALES**
-- **Mentions Légales** : http://localhost:3000/mentions-legales
-- **Confidentialité** : http://localhost:3000/politique-confidentialite
-- **CGV** : http://localhost:3000/cgv
-- **Livraison** : http://localhost:3000/livraison
+- **Mentions Légales** : https://iptv-ten-mu.vercel.app/mentions-legales
+- **Confidentialité** : https://iptv-ten-mu.vercel.app/politique-confidentialite
+- **CGV** : https://iptv-ten-mu.vercel.app/cgv
+- **Livraison** : https://iptv-ten-mu.vercel.app/livraison
 
 ---
 
@@ -49,23 +49,23 @@ Tests: ✅ PASSÉS
 
 ### 🔐 **AUTHENTIFICATION**
 ```bash
-POST /api/auth/revolutionary
-GET  /api/auth/revolutionary
+POST https://iptv-ten-mu.vercel.app/api/auth/revolutionary
+GET  https://iptv-ten-mu.vercel.app/api/auth/revolutionary
 ```
 
 ### 📦 **PRODUITS**
 ```bash
-GET  /api/products/revolutionary
-POST /api/products/revolutionary
-PUT  /api/products/revolutionary
-DELETE /api/products/revolutionary
+GET  https://iptv-ten-mu.vercel.app/api/products/revolutionary
+POST https://iptv-ten-mu.vercel.app/api/products/revolutionary
+PUT  https://iptv-ten-mu.vercel.app/api/products/revolutionary
+DELETE https://iptv-ten-mu.vercel.app/api/products/revolutionary
 ```
 
 ### 💰 **COMMISSIONS**
 ```bash
-POST /api/commissions/revolutionary
-GET  /api/commissions/revolutionary
-PUT  /api/commissions/revolutionary
+POST https://iptv-ten-mu.vercel.app/api/commissions/revolutionary
+GET  https://iptv-ten-mu.vercel.app/api/commissions/revolutionary
+PUT  https://iptv-ten-mu.vercel.app/api/commissions/revolutionary
 ```
 
 ---
