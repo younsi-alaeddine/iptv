@@ -3,6 +3,15 @@ const nextConfig = {
   // Optimisations de performance
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion'],
+    // Configuration Turbopack pour le développement
+    turbo: {
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js',
+        },
+      },
+    },
   },
   
   // Compression
@@ -67,9 +76,9 @@ const nextConfig = {
     CUSTOM_KEY: process.env.CUSTOM_KEY,
   },
   
-  // Optimisations du bundle
+  // Configuration Webpack optimisée (seulement pour la production)
   webpack: (config, { dev, isServer }) => {
-    // Optimisations pour la production
+    // Utiliser Webpack seulement en production pour éviter les conflits avec Turbopack
     if (!dev && !isServer) {
       config.optimization.splitChunks = {
         chunks: 'all',
