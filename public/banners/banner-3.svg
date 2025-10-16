@@ -1,0 +1,44 @@
+<svg width="1200" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="heroGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0b1220;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#c9a227;stop-opacity:0.3" />
+      <stop offset="70%" style="stop-color:#1e3a8a;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#0b1220;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#heroGrad3)"/>
+  
+  <!-- Background patterns -->
+  <circle cx="300" cy="150" r="120" fill="#c9a227" opacity="0.1"/>
+  <circle cx="900" cy="450" r="150" fill="#1e3a8a" opacity="0.1"/>
+  
+  <!-- Streaming services icons -->
+  <rect x="200" y="200" width="150" height="100" rx="15" fill="#e50914" opacity="0.8"/>
+  <text x="275" y="250" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">NETFLIX</text>
+  
+  <rect x="400" y="200" width="150" height="100" rx="15" fill="#1e40af" opacity="0.8"/>
+  <text x="475" y="250" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">SHAHID</text>
+  
+  <rect x="600" y="200" width="150" height="100" rx="15" fill="#7c3aed" opacity="0.8"/>
+  <text x="675" y="250" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">APOLLO</text>
+  
+  <!-- Main content -->
+  <rect x="100" y="100" width="500" height="130" fill="#c9a227" opacity="0.9" rx="15"/>
+  <text x="350" y="135" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="white" text-anchor="middle">Sharing & Apollo</text>
+  <text x="350" y="165" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle">Partagez vos comptes streaming</text>
+  <text x="350" y="190" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">Économisez jusqu'à 70% sur vos abonnements</text>
+  <text x="350" y="215" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">Netflix • Shahid • Apollo • Disney+ • Prime</text>
+  
+  <!-- Call to action -->
+  <rect x="100" y="260" width="220" height="50" fill="white" rx="25"/>
+  <text x="210" y="290" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#0b1220" text-anchor="middle">Voir les offres</text>
+  
+  <!-- Sharing illustration -->
+  <circle cx="850" cy="350" r="80" fill="#c9a227" opacity="0.8"/>
+  <text x="850" y="360" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">SHARE</text>
+  
+  <!-- Arrow connections -->
+  <path d="M200 250 Q400 200 600 250" stroke="#c9a227" stroke-width="3" fill="none" opacity="0.6"/>
+  <path d="M400 250 Q600 200 800 250" stroke="#c9a227" stroke-width="3" fill="none" opacity="0.6"/>
+</svg>

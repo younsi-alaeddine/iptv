@@ -1,0 +1,39 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="apolloGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e2e8f0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#apolloGrad)"/>
+  
+  <!-- Apollo card -->
+  <rect x="80" y="80" width="240" height="160" rx="15" fill="#7c3aed" stroke="#c9a227" stroke-width="3"/>
+  
+  <!-- Apollo logo -->
+  <circle cx="200" cy="130" r="30" fill="#c9a227"/>
+  <text x="200" y="138" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">A</text>
+  
+  <text x="200" y="170" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">APOLLO</text>
+  <text x="200" y="190" font-family="Arial, sans-serif" font-size="16" fill="#c9a227" text-anchor="middle">IPTV</text>
+  
+  <!-- Screen mockup -->
+  <rect x="100" y="200" width="200" height="30" fill="#000" rx="5"/>
+  <rect x="110" y="205" width="180" height="8" fill="#7c3aed"/>
+  <rect x="110" y="218" width="60" height="6" fill="#fff"/>
+  <rect x="180" y="218" width="80" height="6" fill="#fff"/>
+  
+  <!-- Features -->
+  <circle cx="120" cy="240" r="6" fill="#c9a227"/>
+  <text x="135" y="245" font-family="Arial, sans-serif" font-size="10" fill="white">Premium</text>
+  
+  <circle cx="200" cy="240" r="6" fill="#c9a227"/>
+  <text x="215" y="245" font-family="Arial, sans-serif" font-size="10" fill="white">Multi-device</text>
+  
+  <circle cx="280" cy="240" r="6" fill="#c9a227"/>
+  <text x="295" y="245" font-family="Arial, sans-serif" font-size="10" fill="white">VOD</text>
+  
+  <!-- Product info -->
+  <text x="200" y="270" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#0b1220" text-anchor="middle">Apollo IPTV Premium</text>
+  <text x="200" y="285" font-family="Arial, sans-serif" font-size="12" fill="#1e3a8a" text-anchor="middle">À partir de 25 TND</text>
+</svg>

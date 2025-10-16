@@ -1,0 +1,5 @@
+<svg width="40" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 28">
+  <rect width="40" height="28" fill="#ffc72c" rx="4"/>
+  <text x="20" y="16" font-family="Arial, sans-serif" font-size="6" font-weight="bold" fill="#0b1220" text-anchor="middle">Money</text>
+  <text x="20" y="22" font-family="Arial, sans-serif" font-size="6" font-weight="bold" fill="#0b1220" text-anchor="middle">Gram</text>
+</svg>

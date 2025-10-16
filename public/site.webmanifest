@@ -1,0 +1,16 @@
+{
+  "name": "Electro Satellite Tunisie",
+  "short_name": "ElectroSat",
+  "description": "Abonnements IPTV, Sharing & Apollo, Box Android, Streaming et accessoires",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0b1220",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+<svg width="1200" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="heroGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0b1220;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e3a8a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#heroGrad2)"/>
+  
+  <!-- Background elements -->
+  <rect x="800" y="100" width="300" height="200" rx="20" fill="#c9a227" opacity="0.15"/>
+  <circle cx="200" cy="400" r="100" fill="#c9a227" opacity="0.1"/>
+  
+  <!-- Android box illustration -->
+  <rect x="150" y="150" width="300" height="200" rx="20" fill="#1e3a8a" opacity="0.3"/>
+  <rect x="170" y="170" width="260" height="160" fill="#0b1220" rx="10"/>
+  <rect x="180" y="180" width="240" height="80" fill="#c9a227" rx="5"/>
+  <text x="300" y="220" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">Android TV</text>
+  <text x="300" y="245" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">4K Ultra HD</text>
+  
+  <!-- Android logo -->
+  <circle cx="300" cy="320" r="25" fill="#c9a227"/>
+  <text x="300" y="330" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">A</text>
+  
+  <!-- Main content -->
+  <rect x="100" y="80" width="450" height="140" fill="#c9a227" opacity="0.9" rx="15"/>
+  <text x="325" y="120" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="white" text-anchor="middle">Box Android</text>
+  <text x="325" y="150" font-family="Arial, sans-serif" font-size="22" fill="white" text-anchor="middle">Haute Performance</text>
+  <text x="325" y="180" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">Google TV • 4K HDR • Gaming Ready</text>
+  <text x="325" y="205" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">Netflix • YouTube • IPTV • Apps illimitées</text>
+  
+  <!-- Call to action -->
+  <rect x="100" y="250" width="200" height="55" fill="white" rx="28"/>
+  <text x="200" y="285" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#0b1220" text-anchor="middle">Découvrir</text>
+  
+  <!-- Features -->
+  <circle cx="700" cy="200" r="40" fill="#c9a227" opacity="0.8"/>
+  <text x="700" y="210" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">4K</text>
+  
+  <circle cx="800" cy="300" r="40" fill="#c9a227" opacity="0.8"/>
+  <text x="800" y="310" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">HDR</text>
+  
+  <circle cx="900" cy="250" r="40" fill="#c9a227" opacity="0.8"/>
+  <text x="900" y="260" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">WiFi</text>
+</svg>

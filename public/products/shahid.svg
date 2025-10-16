@@ -1,0 +1,37 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="shahidGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e2e8f0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#shahidGrad)"/>
+  
+  <!-- Shahid card -->
+  <rect x="80" y="80" width="240" height="160" rx="15" fill="#1e40af" stroke="#c9a227" stroke-width="3"/>
+  
+  <!-- Shahid logo -->
+  <text x="200" y="130" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="white" text-anchor="middle">SHAHID</text>
+  <text x="200" y="150" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#c9a227" text-anchor="middle">VIP</text>
+  
+  <!-- Screen mockup -->
+  <rect x="100" y="170" width="200" height="50" fill="#000" rx="5"/>
+  <rect x="110" y="180" width="180" height="10" fill="#1e40af"/>
+  <rect x="110" y="195" width="60" height="8" fill="#fff"/>
+  <rect x="180" y="195" width="80" height="8" fill="#fff"/>
+  <rect x="110" y="208" width="100" height="8" fill="#fff"/>
+  
+  <!-- Features -->
+  <circle cx="120" cy="230" r="8" fill="#c9a227"/>
+  <text x="140" y="235" font-family="Arial, sans-serif" font-size="12" fill="white">4 Écrans</text>
+  
+  <circle cx="200" cy="230" r="8" fill="#c9a227"/>
+  <text x="220" y="235" font-family="Arial, sans-serif" font-size="12" fill="white">12 Mois</text>
+  
+  <circle cx="280" cy="230" r="8" fill="#c9a227"/>
+  <text x="300" y="235" font-family="Arial, sans-serif" font-size="12" fill="white">Arabe</text>
+  
+  <!-- Product info -->
+  <text x="200" y="270" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#0b1220" text-anchor="middle">Shahid VIP 4 Écran 12 Mois</text>
+  <text x="200" y="285" font-family="Arial, sans-serif" font-size="12" fill="#1e3a8a" text-anchor="middle">109 TND</text>
+</svg>
