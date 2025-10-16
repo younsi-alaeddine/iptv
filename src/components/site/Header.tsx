@@ -63,6 +63,15 @@ function LogoBar() {
               <Mail className="w-4 h-4" />
               <span>{contactInfo.email}</span>
             </div>
+            <Link href="/dashboard">
+              <Button 
+                size="sm" 
+                className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white shadow-lg"
+              >
+                <User className="w-4 h-4 mr-2" />
+                Dashboard
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
