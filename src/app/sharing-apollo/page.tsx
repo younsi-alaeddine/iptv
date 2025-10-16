@@ -80,7 +80,7 @@ export default function SharingApolloPage() {
                       </li>
                     ))}
                   </ul>
-                  <Button className="w-full">S'abonner</Button>
+                  <Button className="w-full">S&apos;abonner</Button>
                 </CardContent>
               </Card>
             ))}
@@ -105,7 +105,7 @@ export default function SharingApolloPage() {
                       </li>
                     ))}
                   </ul>
-                  <Button className="w-full">S'abonner</Button>
+                  <Button className="w-full">S&apos;abonner</Button>
                 </CardContent>
               </Card>
             ))}

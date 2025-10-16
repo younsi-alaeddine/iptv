@@ -240,7 +240,7 @@ export default function PolitiqueConfidentialitePage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-gray-600">Données marketing : jusqu'à désabonnement</span>
+                    <span className="text-gray-600">Données marketing : jusqu&apos;à désabonnement</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0"></div>

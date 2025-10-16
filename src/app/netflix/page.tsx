@@ -139,7 +139,7 @@ export default function NetflixPage() {
           <div className="text-center">
             <div className="text-4xl mb-2">👥</div>
             <h3 className="font-semibold mb-2">Profils</h3>
-            <p className="text-sm text-muted-foreground">Jusqu'à 5 profils personnalisés</p>
+            <p className="text-sm text-muted-foreground">Jusqu&apos;à 5 profils personnalisés</p>
           </div>
           <div className="text-center">
             <div className="text-4xl mb-2">🚫</div>
